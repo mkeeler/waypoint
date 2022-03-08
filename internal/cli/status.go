@@ -569,13 +569,13 @@ func (c *StatusCommand) FormatAppStatus(projectTarget string, appTarget string) 
 	}
 
 	// deployment and releases use the same headers, with the exception that
-	// deployment lists an additional item for entrypoint count
+	// deployment lists an additional item for instances count
 	releaseHeaders := []string{
 		"App Name", "Version", "Workspace", "Platform", "Artifact", "Lifecycle State",
 	}
 
 	// Add "Entrypoint Connections" for deployment summary headers
-	deployHeaders := append(releaseHeaders, "Entrypoint Connections")
+	deployHeaders := append(releaseHeaders, "Instances Count")
 
 	deployTbl := terminal.NewTable(deployHeaders...)
 
@@ -614,7 +614,7 @@ func (c *StatusCommand) FormatAppStatus(projectTarget string, appTarget string) 
 			deploy.Component.Name,
 			details,
 			deploy.Status.State.String(),
-			fmt.Sprintf("%d", appDeployStatus.EntrypointConfigConnections),
+			fmt.Sprintf("%d", appDeployStatus.InstancesCount),
 		}
 
 		// Add column data to table

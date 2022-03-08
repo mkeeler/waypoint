@@ -75,7 +75,7 @@ func (a *App) DeploymentStatusReport(
 	defer c.Close()
 
 	// Create the initial report. Assuming no error, we'll query ListInstances
-	// to find how many active Entrypoint connections are registered for this
+	// to find how many active instance connections are registered for this
 	// deployment. If there is a non-nil error, just return immediately.
 	report, rErr := a.statusReport(ctx, "deploy_statusreport", c, deployTarget, lastResp)
 	if rErr != nil {
@@ -104,7 +104,7 @@ func (a *App) DeploymentStatusReport(
 		// statusReport() method called above both creates the report and saves
 		// it to state, so modifying it here requires us to re-upsert the report
 		// with the updated count.
-		report.EntrypointConfigConnections = uint32(len(resp.Instances))
+		report.InstancesCount = uint32(len(resp.Instances))
 		newReport, err := a.client.UpsertStatusReport(ctx, &pb.UpsertStatusReportRequest{
 			StatusReport: report,
 		})
