@@ -574,7 +574,7 @@ func (c *StatusCommand) FormatAppStatus(projectTarget string, appTarget string) 
 		"App Name", "Version", "Workspace", "Platform", "Artifact", "Lifecycle State",
 	}
 
-	// Add "Entrypoint Connections" for deployment summary headers
+	// Add "Instance Count" for deployment summary headers
 	deployHeaders := append(releaseHeaders, "Instances Count")
 
 	deployTbl := terminal.NewTable(deployHeaders...)
