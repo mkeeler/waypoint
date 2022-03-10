@@ -46,6 +46,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/hashicorp/aws-sdk-go-base v0.7.0
 	github.com/hashicorp/cap v0.1.1
+	github.com/hashicorp/consul/api v1.12.0
 	github.com/hashicorp/go-argmapper v0.2.3
 	github.com/hashicorp/go-bexpr v0.1.10
 	github.com/hashicorp/go-cleanhttp v0.5.2
@@ -203,7 +204,6 @@ require (
 	github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645 // indirect
-	github.com/hashicorp/consul/api v1.7.0 // indirect
 	github.com/hashicorp/cronexpr v1.1.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-immutable-radix v1.3.0 // indirect
@@ -213,7 +213,7 @@ require (
 	github.com/hashicorp/go-sockaddr v1.0.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/hashicorp/serf v0.9.3 // indirect
+	github.com/hashicorp/serf v0.9.6 // indirect
 	github.com/hashicorp/yamux v0.0.0-20210316155119-a95892c5f864 // indirect
 	github.com/heroku/color v0.0.6 // indirect
 	github.com/huandu/xstrings v1.3.2 // indirect
@@ -241,7 +241,7 @@ require (
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369 // indirect
-	github.com/miekg/dns v1.1.27 // indirect
+	github.com/miekg/dns v1.1.41 // indirect
 	github.com/mitchellh/go-server-timing v1.0.0 // indirect
 	github.com/mitchellh/ioprogress v0.0.0-20180201004757-6a23b12fa88e // indirect
 	github.com/mitchellh/protostructure v0.0.0-20200814180458-3cfccdb015ce // indirect

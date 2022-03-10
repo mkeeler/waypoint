@@ -13,6 +13,7 @@ import (
 	"github.com/hashicorp/waypoint/builtin/aws/lambda"
 	"github.com/hashicorp/waypoint/builtin/aws/ssm"
 	"github.com/hashicorp/waypoint/builtin/azure/aci"
+	"github.com/hashicorp/waypoint/builtin/consul"
 	"github.com/hashicorp/waypoint/builtin/docker"
 	dockerpull "github.com/hashicorp/waypoint/builtin/docker/pull"
 	"github.com/hashicorp/waypoint/builtin/exec"
@@ -56,6 +57,7 @@ var (
 		"vault":                    vault.Options,
 		"terraform-cloud":          tfc.Options,
 		"null":                     null.Options,
+		"consul":                   consul.Options,
 	}
 
 	// BaseFactories is the set of base plugin factories. This will include any
@@ -89,6 +91,9 @@ var (
 		},
 		"terraform-cloud": {
 			Component: &tfc.ConfigSourcer{},
+		},
+		"consul": {
+			Component: &consul.ConfigSourcer{},
 		},
 	}
 )
